@@ -1,0 +1,25 @@
+button {
+  background-color: #4056A1;
+  color: whitesmoke;
+}
+
+
+.base {
+  display: flex;
+  justify-content: space-between;
+  font-family: 'bungee', sans-serif;
+}
+
+#input-tweet {
+  display: flex;
+  flex-direction: column;
+  font-family: 'Source San 3', sans-serif;
+}
+
+#tweet-text {
+  border: none; /* Remove border */
+  background-color: #f4f1ec;
+  border: none;
+  border-bottom: 3px solid #000000;
+  margin-bottom: 10px;
+}
