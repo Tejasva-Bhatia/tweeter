@@ -1,4 +1,5 @@
 .nav {
+  position: fixed;
   height: 120px;
   background-color: #4056A1;
   color: #FFFFFF;
@@ -27,4 +28,5 @@
   font-family: 'Bungee', sans-serif;
   align-items: flex-end;
 }
+
 
