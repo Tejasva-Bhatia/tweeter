@@ -17,7 +17,7 @@ button {
 }
 
 #tweet-text {
-  border: none; /* Remove border */
+  border: none;
   background-color: #f4f1ec;
   border-bottom: 3px solid #545149;
   margin-bottom: 10px;

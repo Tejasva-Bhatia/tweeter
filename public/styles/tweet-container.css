@@ -1,4 +1,4 @@
-.tweets-container {
+article.tweet {
   border: 3px solid ;
   margin-top: 40px;
   margin-bottom: 40px;;
@@ -36,11 +36,12 @@ article.tweet header div {
   
 }
 
-#tweet-id {
+article.tweet header div #tweet-id {
   margin: 0;
-  color: rgb(208, 221, 221); /* Set the color to white */
+  color: rgb(183, 188, 188); /* Set the color to white */
 }
 
+/* Tweet content box */
 article.tweet .tweet-content {
   border-bottom: 3px solid;
   width: 98%;
@@ -54,9 +55,6 @@ article.tweet .tweet-content p {
 }
 
 
-
-
-
 article.tweet footer {
   display: flex;
   flex-direction: row;
@@ -65,11 +63,6 @@ article.tweet footer {
   margin-left: 20px;
   margin-right: 20px;
   font-size: 12px;
-}
-
-article.tweet footer .icons {
-  display: flex;
-  
 }
 
 article.tweet footer .icons i {
