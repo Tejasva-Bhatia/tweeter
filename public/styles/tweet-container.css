@@ -1,0 +1,83 @@
+.tweets-container {
+  border: 3px solid ;
+  margin-top: 40px;
+  margin-bottom: 40px;;
+}
+ /* shadow box when hovering over tweet-content box */
+article.tweet:hover {
+  box-shadow: 7px 7px 0px rgba(173, 173, 173, 0.7);
+}
+/* shadow tweet id(@name) when hovering over tweet-content box */
+article.tweet:hover #tweet-id {
+  color: rgb(147, 147, 147);
+}
+
+article.tweet header {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+article.tweet header img {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  margin-right: 10px;
+  margin-left: 10px;
+}
+
+article.tweet header div {
+  display: flex; 
+  align-items: center;
+  flex-grow: 1;
+  flex-direction: row;
+  margin-right: 20px;
+  justify-content: space-between;
+  
+}
+
+#tweet-id {
+  margin: 0;
+  color: rgb(208, 221, 221); /* Set the color to white */
+}
+
+article.tweet .tweet-content {
+  border-bottom: 3px solid;
+  width: 98%;
+  margin: 0 auto;
+  
+}
+
+article.tweet .tweet-content p {
+  margin-left: 20px;
+  
+}
+
+
+
+
+
+article.tweet footer {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  margin-left: 20px;
+  margin-right: 20px;
+  font-size: 12px;
+}
+
+article.tweet footer .icons {
+  display: flex;
+  
+}
+
+article.tweet footer .icons i {
+  margin-right: 5px;
+  cursor: pointer;
+  color: #4056a1;
+}
+
+article.tweet footer .icons i:hover {
+  color: orange;
+}
