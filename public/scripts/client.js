@@ -91,6 +91,11 @@ $(document).ready(function() {
       url: "/tweets",
       data: formData
     }).then(()=>{
+      loadTweets().then((tweets) => {
+        renderTweets(tweets);
+      }).catch(function(error) {
+        console.error("Error loading tweets:", error);
+      });
       alert("Success Submission of Tweet");
       $tweetText.val("");
     });
