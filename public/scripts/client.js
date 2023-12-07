@@ -19,7 +19,7 @@ const createTweetElement = function(tweetObj) {
         </header>
       
         <div class="tweet-content">
-          <p >${tweetObj.content.text}</p>
+          <p >${$("<div>").text(tweetObj.content.text).html()}</p>
         </div>
       
         <footer>
