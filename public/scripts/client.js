@@ -5,7 +5,7 @@
  */
 
 // Create new tweet
-const createTweetElement = function (tweetObj) {
+const createTweetElement = function(tweetObj) {
   const $tweet = $(`
  <article class="tweet">
         <header>
@@ -35,54 +35,42 @@ const createTweetElement = function (tweetObj) {
 };
 
 // Append new tweet to the tweet-container
-const renderTweets = function (tweets) {
+const renderTweets = function(tweets) {
   for (const tweet of tweets) {
     const $tweet = createTweetElement(tweet);
     $('#tweets-container').append($tweet);
   }
 };
 
-// Test / driver code (temporary). Eventually will get this from the server.
-const tweetData = [
-  {
-    "user": {
-      "name": "Newton",
-      "avatars": "https://i.imgur.com/73hZDYK.png"
-      ,
-      "handle": "@SirIsaac"
-    },
-    "content": {
-      "text": "If I have seen further it is by standing on the shoulders of giants"
-    },
-    "created_at": 1461116232227
-  },
-  {
-    "user": {
-      "name": "Descartes",
-      "avatars": "https://i.imgur.com/nlhLi3I.png",
-      "handle": "@rd"
-    },
-    "content": {
-      "text": "Je pense , donc je suis"
-    },
-    "created_at": 1461113959088
-  }
-];
+// function to loads a tweet from '/tweets' and recieve an array of tweets in json
+const loadTweets = function() {
+  return $.ajax({
+    method: "GET",
+    url: "/tweets",
+    dataType: "json"
+  });
+};
 
 
 $(document).ready(function() {
-  renderTweets(tweetData);
+  
+  // Load tweets and rendering.
+  loadTweets().then((tweets) => {
+    renderTweets(tweets);
+  }).catch(function(error) {
+    console.error("Error loading tweets:", error);
+  });
+
+  // Post tweet details to server
   $("#input-tweet").on("submit", function(event) {
-    alert("Handler for `submit` called.");
     event.preventDefault();
     const formData = $(event.currentTarget).serialize();
     console.log(formData);
     $.ajax({
       method: "POST",
-      url:"/tweets/",
-      data:formData
-
-    })
+      url: "/tweets",
+      data: formData
+    });
   });
 
 });
