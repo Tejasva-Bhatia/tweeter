@@ -5,7 +5,7 @@
  */
 
 // Create new tweet
-const createTweetElement = function(tweetObj) {
+const createTweetElement = function (tweetObj) {
   const $tweet = $(`
  <article class="tweet">
         <header>
@@ -35,7 +35,7 @@ const createTweetElement = function(tweetObj) {
 };
 
 // Append new tweet to the tweet-container
-const renderTweets = function(tweets) {
+const renderTweets = function (tweets) {
   for (const tweet of tweets) {
     const $tweet = createTweetElement(tweet);
     $('#tweets-container').append($tweet);
@@ -72,5 +72,18 @@ const tweetData = [
 
 $(document).ready(function() {
   renderTweets(tweetData);
+  $("#input-tweet").on("submit", function(event) {
+    alert("Handler for `submit` called.");
+    event.preventDefault();
+    const formData = $(event.currentTarget).serialize();
+    console.log(formData);
+    $.ajax({
+      method: "POST",
+      url:"/tweets/",
+      data:formData
+
+    })
+  });
+
 });
 
