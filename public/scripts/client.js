@@ -68,6 +68,22 @@ $(document).ready(function() {
   // Post tweet details to server
   $("#input-tweet").on("submit", function(event) {
     event.preventDefault();
+
+    //validation
+    const $tweetText = $("#tweet-text");
+    const tweetContent = $tweetText.val().trim();
+
+    if (!tweetContent) {
+      alert("Error: Tweet content cannot be empty.");
+      return;
+    }
+
+    if (tweetContent.length > 140) {
+      alert("Error: Tweet content exceeds 140 characters.");
+      return;
+    }
+
+    //If everything goes great, proceed with sending tweet to server
     const formData = $(event.currentTarget).serialize();
     console.log(formData);
     $.ajax({
@@ -76,6 +92,7 @@ $(document).ready(function() {
       data: formData
     }).then(()=>{
       alert("Success Submission of Tweet");
+      $tweetText.val("");
     });
     
     
