@@ -74,15 +74,22 @@ $(document).ready(function() {
     const tweetContent = $tweetText.val().trim();
 
     if (!tweetContent) {
-      alert("Error: Tweet content cannot be empty.");
+      $(".error-message").text("⚠️Tweet content cannot be empty.⚠️").show();
+      setTimeout(()=>{
+        $(".error-message").hide();
+      },5000);
       return;
     }
 
     if (tweetContent.length > 140) {
-      alert("Error: Tweet content exceeds 140 characters.");
+      $(".error-message").text("⚠️Too long. Plz rspct our arbitrary limit of 140 chars.⚠️").show();
+      setTimeout(()=>{
+        $(".error-message").hide();
+      },5000);
       return;
     }
-
+    $(".error-message").hide();
+    
     //If everything goes great, proceed with sending tweet to server
     const formData = $(event.currentTarget).serialize();
     console.log(formData);

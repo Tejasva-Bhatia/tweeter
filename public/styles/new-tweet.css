@@ -24,3 +24,11 @@ button {
   margin-top: 6px;
 }
 
+.error-message {
+  color: #721c24; /* Bootstrap's red color for danger */
+  background-color: #f8d7da; /* Bootstrap's red color for danger background */
+  padding: 8px;
+  border-radius: 4px;
+  margin-top: 10px;
+  display: none; /* Initially hide the error message */
+}
