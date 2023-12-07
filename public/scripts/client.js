@@ -70,7 +70,11 @@ $(document).ready(function() {
       method: "POST",
       url: "/tweets",
       data: formData
+    }).then(()=>{
+      alert("Success Submission of Tweet");
     });
+    
+    
   });
 
 });
