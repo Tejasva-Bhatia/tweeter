@@ -6,6 +6,8 @@
 
 // Create new tweet
 const createTweetElement = function(tweetObj) {
+  const timeAgo = timeago.format(tweetObj.created_at);
+  
   const $tweet = $(`
  <article class="tweet">
         <header>
@@ -17,11 +19,11 @@ const createTweetElement = function(tweetObj) {
         </header>
       
         <div class="tweet-content">
-          <p>${tweetObj.content.text}</p>
+          <p >${tweetObj.content.text}</p>
         </div>
       
         <footer>
-          <p><b>${tweetObj.created_at}</b></p>
+          <p><b>${timeAgo}</b></p>
           <div class="icons">
             <i class="fa-solid fa-flag"></i>
             <i class="fas fa-retweet"></i>
@@ -38,8 +40,10 @@ const createTweetElement = function(tweetObj) {
 const renderTweets = function(tweets) {
   for (const tweet of tweets) {
     const $tweet = createTweetElement(tweet);
+    
     $('#tweets-container').append($tweet);
   }
+  
 };
 
 // function to loads a tweet from '/tweets' and recieve an array of tweets in json
