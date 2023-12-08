@@ -30,3 +30,13 @@
 }
 
 
+@media (max-width: 1024px) {
+
+  /* Additional styles for smaller screens */
+  .nav {
+    background-color: transparent;
+  }
+
+  /* ... Add more responsive styles as needed ... */
+}
+

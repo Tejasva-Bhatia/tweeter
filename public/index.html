@@ -50,37 +50,39 @@
     </div>
   </nav>
 
-  <header>
-    <div class="person">
-      <div>
-        <img src="/images/profile-hex.png">
-      </div>
-      <br>
-      <div>
-        <h2>Tejasva Bhatia</h2>
-      </div>
-    </div>
-  </header>
-
-  <!-- Page-specific (main) content here -->
-  <main class="container">
-    <section class="new-tweet">
-      <div class="error-message" style="display: none;"></div>
-      <h2>Compose Tweet</h2>
-      <form id= "input-tweet" action="/tweets/" method="POST" >
-        <label for="tweet-text">What are you humming about?</label>
-        <textarea name="text" id="tweet-text"></textarea>
-        <div class = "base">
-          <button type="submit">Tweet</button>
-          <output name="counter" class="counter" for="tweet-text">140</output>
+  
+    <header class="user-details">
+      <div class="person">
+        <div>
+          <img src="/images/profile-hex.png">
         </div>
-      </form>
-    </section>
-
-    <section id="tweets-container">
-     
-    </section>
-  </main>
+        <br>
+        <div>
+          <h2>Tejasva Bhatia</h2>
+        </div>
+      </div>
+    </header>
+  
+    <!-- Page-specific (main) content here -->
+    <main class="container">
+      <section class="new-tweet">
+        <div class="error-message" style="display: none;"><span></span></div>
+        <h2></h2>
+        <form id= "input-tweet" action="/tweets/" method="POST" >
+          <label for="tweet-text">What are you humming about?</label>
+          <textarea name="text" id="tweet-text"></textarea>
+          <div class = "base">
+            <button type="submit">Tweet</button>
+            <output name="counter" class="counter" for="tweet-text">140</output>
+          </div>
+        </form>
+      </section>
+  
+      <section id="tweets-container">
+       
+      </section>
+    </main>
+  
   
 </body>
 
