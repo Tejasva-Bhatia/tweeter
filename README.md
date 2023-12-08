@@ -1,16 +1,55 @@
 # Tweeter Project
 
-Tweeter is a simple, single-page Twitter clone.
+Tweeter is a simple Twitter clone project built with HTML, CSS, jQuery, and Node.js. It allows users to compose and post tweets with a character limit and view existing tweets.
 
-This repository is the starter code for the project: Students will fork and clone this repository, then build upon it to practice their HTML, CSS, JS, jQuery and AJAX front-end skills, and their Node, Express back-end skills.
+## Features
+
+- Compose new tweets with a character limit of 140.
+- View and interact with existing tweets.
+- Character counter to keep track of tweet length.
+- Responsive design with breakpoints for a seamless experience on different devices.
+- Client-side validation to ensure tweets meet the necessary criteria.
+
+## Technologies Used
+
+- HTML, CSS for front-end design.
+- jQuery for DOM manipulation and AJAX requests.
+- Node.js for the server-side implementation.
+- Express.js for handling routes and requests.
+
+## Final Product
+
+!["Screenshot of Desktop View"](https://github.com/Tejasva-Bhatia/tweeter/blob/master/public/images/Desktop-View.png)
+!["Screenshot of Mobile View"](https://github.com/Tejasva-Bhatia/tweeter/blob/master/public/images/Mobile-View.png)
 
 ## Getting Started
 
-1. [Create](https://docs.github.com/en/repositories/creating-and-managing-repositories/creating-a-repository-from-a-template) a new repository using this repository as a template.
-2. Clone your repository onto your local device.
-3. Install dependencies using the `npm install` command.
-3. Start the web server using the `npm run local` command. The app will be served at <http://localhost:8080/>.
-4. Go to <http://localhost:8080/> in your browser.
+1. **Fork the Repository:**
+   - Click on the "Fork" button at the top-right corner of this page.
+
+2. **Clone the Forked Repository:**
+   - Clone your forked repository using:
+     ```
+     git clone https://github.com/your-username/tweeter.git
+     ```
+
+3. **Install Dependencies:**
+   - Navigate to the project directory and install dependencies with:
+     ```
+     npm install
+     ```
+
+4. **Start the Server:**
+   - Run the application with:
+     ```
+     npm run local
+     ```
+
+5. **Open in Browser:**
+   - Open your web browser and navigate to [http://localhost:8080](http://localhost:8080).
+
+Feel free to explore, contribute, and share your thoughts!
+
 
 ## Dependencies
 

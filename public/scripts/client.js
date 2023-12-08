@@ -1,11 +1,6 @@
-/*
- * Client-side JS logic goes here
- * jQuery is already loaded
- * Reminder: Use (and do all your DOM work in) jQuery's document ready function
- */
 
-// Create new tweet
-const createTweetElement = function (tweetObj) {
+// Creating new tweet
+const createTweetElement = function(tweetObj) {
   const timeAgo = timeago.format(tweetObj.created_at);
 
   const $tweet = $(`
@@ -37,7 +32,7 @@ const createTweetElement = function (tweetObj) {
 };
 
 // Append new tweet to the tweet-container
-const renderTweets = function (tweets) {
+const renderTweets = function(tweets) {
   $('#tweets-container').empty();
   for (const tweet of tweets) {
     const $tweet = createTweetElement(tweet);
@@ -47,8 +42,8 @@ const renderTweets = function (tweets) {
 
 };
 
-// function to loads a tweet from '/tweets' and recieve an array of tweets in json
-const loadTweets = function () {
+// Function to loads a tweet from '/tweets' and recieve an array of tweets in json
+const loadTweets = function() {
   return $.ajax({
     method: "GET",
     url: "/tweets",
@@ -57,17 +52,17 @@ const loadTweets = function () {
 };
 
 
-$(document).ready(function () {
+$(document).ready(function() {
 
   // Load tweets and rendering.
   loadTweets().then((tweets) => {
     renderTweets(tweets);
-  }).catch(function (error) {
+  }).catch(function(error) {
     console.error("Error loading tweets:", error);
   });
 
-  // Post tweet details to server
-  $("#input-tweet").on("submit", function (event) {
+  // Post tweet details to server when Tweet is submitted
+  $("#input-tweet").on("submit", function(event) {
     event.preventDefault();
 
     //validation
@@ -108,7 +103,7 @@ $(document).ready(function () {
         }, 2500);
         // render tweets
         renderTweets(tweets);
-      }).catch(function (error) {
+      }).catch(function(error) {
         console.error("Error loading tweets:", error);
       });
 

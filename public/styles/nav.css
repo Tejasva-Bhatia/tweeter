@@ -8,10 +8,8 @@
   padding-left: 1.5em;
   padding-right: 1.5em;
   padding-bottom: 1.0em;
-   /* Full width of the viewport */
-   width: 100vw;
+  width: 100vw;
 }
-
 
 .newTweet {
   display: flex;
@@ -19,6 +17,7 @@
   justify-content: flex-end;
   align-items: center;
 }
+
 .newTweet i {
   color: red;
 }
@@ -31,12 +30,7 @@
 
 
 @media (max-width: 1024px) {
-
-  /* Additional styles for smaller screens */
   .nav {
     background-color: transparent;
   }
-
-  /* ... Add more responsive styles as needed ... */
 }
-

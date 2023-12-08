@@ -1,18 +1,12 @@
-/*
- * http://www.paulirish.com/2012/box-sizing-border-box-ftw/
- * https://css-tricks.com/international-box-sizing-awareness-day/
- * Do not modify these two selectors, please
- */
 html {
   box-sizing: border-box;
 }
-*, *:before, *:after {
+
+*,
+*:before,
+*:after {
   box-sizing: inherit;
 }
-
-/*
- * Global layout stuff
- */
 
 body {
   color: #545149;
@@ -21,25 +15,21 @@ body {
   font-family: 'Source Sans 3', sans-serif;
 }
 
-/*
- * Additional CSS can be defined below or in other CSS files, as per instructions
- */
-
- .container {
+.container {
   width: 90%;
   margin-top: 20px;
-  margin: 0 auto;  /* Center the container horizontally */
+  margin: 0 auto;
+  /* Center the container horizontally */
   padding: 0 5%;
   display: flex;
   flex-direction: column;
   justify-content: center;
   background-color: inherit;
- }
+}
 
 
 
-
- @media only screen and (min-width: 1024px) {
+@media only screen and (min-width: 1024px) {
 
   .user-details {
     float: left;
@@ -47,6 +37,7 @@ body {
     height: 30%;
     margin: 250px 25px 25px 125px;
   }
+
   .person {
     width: 300px;
     height: 300px;
@@ -60,7 +51,6 @@ body {
     float: right;
     padding-top: 1em;
     margin-top: 6em;
-   
+
   }
 }
-

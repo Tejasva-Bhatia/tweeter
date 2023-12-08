@@ -1,13 +1,14 @@
 article.tweet {
-  border: 3px solid ;
+  border: 3px solid;
   margin-top: 40px;
-  margin-bottom: 40px;;
+  margin-bottom: 40px;
+  ;
 }
- /* shadow box when hovering over tweet-content box */
+
 article.tweet:hover {
   box-shadow: 7px 7px 0px rgba(173, 173, 173, 0.7);
 }
-/* shadow tweet id(@name) when hovering over tweet-content box */
+
 article.tweet:hover #tweet-id {
   color: rgb(147, 147, 147);
 }
@@ -27,18 +28,17 @@ article.tweet header img {
 }
 
 article.tweet header div {
-  display: flex; 
+  display: flex;
   align-items: center;
   flex-grow: 1;
   flex-direction: row;
   margin-right: 20px;
   justify-content: space-between;
-  
 }
 
 article.tweet header div #tweet-id {
   margin: 0;
-  color: rgb(183, 188, 188); /* Set the color to white */
+  color: rgb(183, 188, 188);
 }
 
 /* Tweet content box */
@@ -46,14 +46,12 @@ article.tweet .tweet-content {
   border-bottom: 3px solid;
   width: 98%;
   margin: 0 auto;
-  
+
 }
 
 article.tweet .tweet-content p {
   margin-left: 20px;
-  
 }
-
 
 article.tweet footer {
   display: flex;
