@@ -25,8 +25,8 @@ button {
 }
 
 .error-message {
-  color: #721c24; /* Bootstrap's red color for danger */
-  background-color: #f8d7da; /* Bootstrap's red color for danger background */
+  color: #721c24;
+  background-color: #f8d7da; 
   padding: 8px;
   border-radius: 4px;
   margin-top: 10px;
@@ -35,4 +35,13 @@ button {
   margin-bottom: 30px;
 }
 
-
+.success-message {
+  color: green;
+  background-color: #90EE90; 
+  padding: 8px;
+  border-radius: 4px;
+  margin-top: 10px;
+  display: flex; 
+  justify-content: center;
+  margin-bottom: 30px;
+}

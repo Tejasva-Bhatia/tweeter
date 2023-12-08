@@ -104,7 +104,12 @@ $(document).ready(function() {
       }).catch(function(error) {
         console.error("Error loading tweets:", error);
       });
-      alert("Success Submission of Tweet");
+      let SuccessMessage = $(".success-message");
+      
+      SuccessMessage.text("Tweet Successfully Posted!").show();
+      setTimeout(()=>{
+        SuccessMessage.hide();
+      },5000);
       $tweetText.val("");
     });
     
