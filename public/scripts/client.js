@@ -95,6 +95,7 @@ $(document).ready(function() {
       data: formData
     }).then(() => {
       loadTweets().then((tweets) => {
+        $(".counter").text("140");
         // post success message
         let SuccessMessage = $(".success-message");
         SuccessMessage.text("Tweet Successfully Posted!").show();
