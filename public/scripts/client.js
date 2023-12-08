@@ -5,9 +5,9 @@
  */
 
 // Create new tweet
-const createTweetElement = function(tweetObj) {
+const createTweetElement = function (tweetObj) {
   const timeAgo = timeago.format(tweetObj.created_at);
-  
+
   const $tweet = $(`
  <article class="tweet">
         <header>
@@ -37,18 +37,18 @@ const createTweetElement = function(tweetObj) {
 };
 
 // Append new tweet to the tweet-container
-const renderTweets = function(tweets) {
+const renderTweets = function (tweets) {
   $('#tweets-container').empty();
   for (const tweet of tweets) {
     const $tweet = createTweetElement(tweet);
-    
+
     $('#tweets-container').append($tweet);
   }
-  
+
 };
 
 // function to loads a tweet from '/tweets' and recieve an array of tweets in json
-const loadTweets = function() {
+const loadTweets = function () {
   return $.ajax({
     method: "GET",
     url: "/tweets",
@@ -57,17 +57,17 @@ const loadTweets = function() {
 };
 
 
-$(document).ready(function() {
-  
+$(document).ready(function () {
+
   // Load tweets and rendering.
   loadTweets().then((tweets) => {
     renderTweets(tweets);
-  }).catch(function(error) {
+  }).catch(function (error) {
     console.error("Error loading tweets:", error);
   });
 
   // Post tweet details to server
-  $("#input-tweet").on("submit", function(event) {
+  $("#input-tweet").on("submit", function (event) {
     event.preventDefault();
 
     //validation
@@ -76,21 +76,21 @@ $(document).ready(function() {
 
     if (!tweetContent) {
       $(".error-message").text("⚠️Tweet content cannot be empty.⚠️").show();
-      setTimeout(()=>{
+      setTimeout(() => {
         $(".error-message").hide();
-      },5000);
+      }, 5000);
       return;
     }
 
     if (tweetContent.length > 140) {
       $(".error-message").text("⚠️Too long. Plz rspct our arbitrary limit of 140 chars.⚠️").show();
-      setTimeout(()=>{
+      setTimeout(() => {
         $(".error-message").hide();
-      },5000);
+      }, 5000);
       return;
     }
     $(".error-message").hide();
-    
+
     //If everything goes great, proceed with sending tweet to server
     const formData = $(event.currentTarget).serialize();
     console.log(formData);
@@ -98,22 +98,24 @@ $(document).ready(function() {
       method: "POST",
       url: "/tweets",
       data: formData
-    }).then(()=>{
+    }).then(() => {
       loadTweets().then((tweets) => {
+        // post success message
+        let SuccessMessage = $(".success-message");
+        SuccessMessage.text("Tweet Successfully Posted!").show();
+        setTimeout(() => {
+          SuccessMessage.hide();
+        }, 2500);
+        // render tweets
         renderTweets(tweets);
-      }).catch(function(error) {
+      }).catch(function (error) {
         console.error("Error loading tweets:", error);
       });
-      let SuccessMessage = $(".success-message");
-      
-      SuccessMessage.text("Tweet Successfully Posted!").show();
-      setTimeout(()=>{
-        SuccessMessage.hide();
-      },5000);
+
       $tweetText.val("");
     });
-    
-    
+
+
   });
 
 });
