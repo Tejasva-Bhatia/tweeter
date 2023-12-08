@@ -18,8 +18,22 @@
   align-items: center;
 }
 
+@keyframes moveUpDown {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-5px); /* Adjust the value for the desired movement */
+  }
+}
+
+/* .newTweet div {
+  margin-bottom: 10px;
+} */
+
 .newTweet i {
   color: red;
+  animation: moveUpDown 1s infinite;
 }
 
 .name {
