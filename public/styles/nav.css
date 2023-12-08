@@ -34,6 +34,7 @@
 .newTweet i {
   color: red;
   animation: moveUpDown 1s infinite;
+  cursor: pointer;
 }
 
 .name {
