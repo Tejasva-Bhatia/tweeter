@@ -38,6 +38,7 @@ const createTweetElement = function(tweetObj) {
 
 // Append new tweet to the tweet-container
 const renderTweets = function(tweets) {
+  $('#tweets-container').empty();
   for (const tweet of tweets) {
     const $tweet = createTweetElement(tweet);
     
