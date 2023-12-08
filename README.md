@@ -19,14 +19,11 @@ Tweeter is a simple Twitter clone project built with HTML, CSS, jQuery, and Node
 
 ## Final Product
 
-<div style="text-align:center">
-  <img alt="Screenshot of Desktop View" src="https://github.com/Tejasva-Bhatia/tweeter/blob/master/public/images/Desktop-View.png">
-</div>
+!["Screenshot of Desktop View"](https://github.com/Tejasva-Bhatia/tweeter/blob/master/public/images/Desktop-View.png)
 
-<div style="text-align:center">
-  <img alt="Screenshot of Mobile View" src="https://github.com/Tejasva-Bhatia/tweeter/blob/master/public/images/Mobile-View.png">
-</div>
-
+<p align = "center">
+<img src="https://github.com/Tejasva-Bhatia/tweeter/blob/master/public/images/Mobile-View.png" />
+</p>
 ## Getting Started
 
 1. **Fork the Repository:**
