@@ -27,10 +27,6 @@
   }
 }
 
-/* .newTweet div {
-  margin-bottom: 10px;
-} */
-
 .newTweet i {
   color: red;
   animation: moveUpDown 1s infinite;
